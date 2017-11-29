@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="control.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<div class="container">
+  <h2>Danh sách ô tô</h2>       
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+			<th>Type</th>
+			<th>NumberPlate</th>
+			<th>YearOfManufacture</th>
+			<th>Brand</th>
+			<th>HaveInsurance</th>
+			<th>HavePositioningDevice</th>
+			<th>HavePowerSteering</th>
+			<th>ActionDuration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "car in car">
+			<th>{{car.id}}</th>
+			<th>{{car.type}}</th>
+			<th>{{car.numberPlate}}</th>
+			<th>{{car.yearOfManufacture}}</th>
+			<th>{{car.brand}}</th>
+			<th>{{car.haveInsurance}}</th>
+			<th>{{car.havePositioningDevice}}</th>
+			<th>{{car.havePowerSteering}}</th>
+			<th>{{car.actionDuration}}</th>
+		</tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
